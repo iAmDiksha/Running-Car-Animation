@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.container{
+    background: lightgray;
+    height: 100vh;
+    margin: auto;
+    width: 960px;
+    box-shadow: 0 0 1.5em rgba(0,0,0,0.5);
+    position: relative;
+}
+.city img{
+    width: 960px;
+    height: 80vh;
+}
+.car img{
+    width: 300px;
+    position: absolute;
+    top: 300px;
+    right: 0;
+}
+@keyframes move{
+    0%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translateX(-660px);
+    }
+}
+.car img{
+    animation-name:move;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 10;
+    animation-timing-function: linear;
+}
